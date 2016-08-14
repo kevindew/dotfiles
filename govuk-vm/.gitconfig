@@ -1,0 +1,7 @@
+[user]
+  name = Kevin Dew
+  email = kevin.dew@digital.cabinet-office.gov.uk
+[push]
+  default = simple
+[core]
+  excludesfile = /home/vagrant/.gitignore_global
