@@ -55,6 +55,9 @@ plugins=(git bundler)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# load /etc/profile files - before ZSH as it breaks prompt
+. /etc/profile
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -96,10 +99,6 @@ zstyle :compinstall filename '/home/vagrant/.zshrc'
 
 autoload -Uz compinit
 compinit
-
-export RBENV_ROOT=/usr/lib/rbenv
-eval "$(rbenv init -)"
-export PATH="/usr/lib/rbenv/shims:/usr/lib/goenv/shims:$PATH"
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-default-dark.sh"
