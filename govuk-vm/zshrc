@@ -111,4 +111,6 @@ ttyctl -f
 
 eval "$(thefuck --alias)"
 
+export LESS="-S -R"
+
 local ret_status="%(?:%{$fg_bold[green]%}vm :%{$fg_bold[red]%}vm )"
