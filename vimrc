@@ -231,7 +231,7 @@ function! InferRubyTestCommand(filename)
     if a:filename =~ "\.feature$"
       let command  = "bundle exec cucumber --strict"
     elseif a:filename =~ "_spec\.rb$"
-      let command = "bundle exec rspec"
+      let command = "bundle exec rspec --format progress"
     elseif a:filename =~ "_test\.rb$"
       let command = "bundle exec ruby -I test"
     else
