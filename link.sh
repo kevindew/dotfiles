@@ -6,3 +6,7 @@ ln -s "${SCRIPTDIR}/vimrc" ~/.vimrc
 ln -s "${SCRIPTDIR}/pryrc" ~/.pryrc
 ln -s "${SCRIPTDIR}/gitignore_global" ~/.gitignore_global
 ln -s "${SCRIPTDIR}/ssh-config" ~/.ssh/config
+ln -s "${SCRIPTDIR}/git_template" ~/.git_template
+
+git config --global init.templatedir '~/.git_template'
+git config --global alias.ctags '!.git/hooks/ctags'
