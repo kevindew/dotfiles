@@ -1,7 +1,7 @@
-set VERBOSITY verbose
+\set VERBOSITY verbose
 
--- [user]@[host]:[port]/[db]['*' if we are in a transaction]['#' if we are root-like;
-\set PROMPT1 '%n@%m:%>/%/%x%# '
+-- [db]['*' if we are in a transaction]['#' if we are root-like;
+\set PROMPT1 '%/%x%# '
 
 -- Make history ignore all lines entered that were preceded by spaces, and
 -- ignore any entries that matched the previous line entered.
@@ -29,11 +29,11 @@ set VERBOSITY verbose
 -- Show the application_name in pg_stat_activity.
 -- Good database citizens set this field so we know who to blame when a query
 -- hogs resources, or somebody stays idle in transaction for too long.
-set application_name to kevindew_psql; commit;
+--set application_name to kevindew_psql; commit;
 
 -- Set bytea output to show as many ASCII letters as possible.
 -- (Handy if you are storing text whose encoding you do not know in bytea columns.)
-set bytea_output to escape; commit;
+--set bytea_output to escape; commit;
 
 \set ECHO all
 
@@ -42,3 +42,4 @@ set bytea_output to escape; commit;
 
 -- Automatically use expanded layout
 \x auto
+
