@@ -35,11 +35,11 @@
 -- (Handy if you are storing text whose encoding you do not know in bytea columns.)
 --set bytea_output to escape; commit;
 
-\set ECHO all
-
 -- Converts SQL keywords to capitals in tab completion
 \set COMP_KEYWORD_CASE upper
 
 -- Automatically use expanded layout
 \x auto
+
+\set ECHO all
 
