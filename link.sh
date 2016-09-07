@@ -12,6 +12,7 @@ if [ -d ~/.git_template ]; then
 else
   ln -s "${SCRIPTDIR}/git_template" ~/.git_template
 fi
+ln -s "${SCRIPTDIR}/psqlrc" ~/.psqlrc
 
 git config --global init.templatedir '~/.git_template'
 git config --global alias.ctags '!.git/hooks/ctags'
