@@ -7,8 +7,8 @@ if [ -d "$HOME/govuk/govuk-puppet/development-vm" ]; then
   alias vm-psql="psql -h localhost -p 15432 -U vagrant"
   alias vm-psql-publishing-api="vm-psql publishing_api_development"
 fi
-alias vpn-github="sudo openconnect vpn.digital.cabinet-office.gov.uk/github"
-alias vpn-ah="sudo openconnect vpn.digital.cabinet-office.gov.uk/ah"
+alias vpn-github="sudo openconnect -v --pfs --no-dtls -u kevindew vpn.digital.cabinet-office.gov.uk/github"
+alias vpn-ah="sudo openconnect -v --pfs --no-dtls -u kevindew vpn.digital.cabinet-office.gov.uk/ah"
 alias sidekiq-integration-port-fw="ssh backend-1.backend.integration -CNL 9000:127.0.0.1:80"
 alias rabbitmq-integration-port-fw="ssh rabbitmq-1.backend.integration -L 15673:127.0.0.1:15672"
 alias gfu="git push --force"
