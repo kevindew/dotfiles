@@ -129,3 +129,5 @@ else
 fi
 export GPG_TTY=$(tty)
 export GPG_AGENT_INFO
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
