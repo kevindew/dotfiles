@@ -28,7 +28,11 @@ filetype plugin indent on
 """ Settings
 syntax enable
 let base16colorspace=256
-colorscheme base16-default-dark
+if $USER == "vagrant"
+  colorscheme base16-solarized-dark
+else
+  colorscheme base16-default-dark
+endif
 
 set nocompatible
 set autoindent
