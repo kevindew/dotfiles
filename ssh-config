@@ -1,7 +1,19 @@
+Host govuk-vm
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/kevindew/govuk/govuk-puppet/development-vm/.vagrant/machines/default/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+  ForwardAgent yes
+  ForwardX11 yes
+
 Host *
   User kevindew
   UseRoaming no
-
 
 # CI
 # --
