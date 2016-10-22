@@ -13,7 +13,6 @@ Host govuk-vm
 
 Host *
   User kevindew
-  UseRoaming no
 
 # CI
 # --
