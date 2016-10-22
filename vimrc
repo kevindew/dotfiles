@@ -283,6 +283,17 @@ vmap <leader>p "+p
 nmap <leader>P "+P
 nmap <leader>cs :let @*=expand("%")<CR>
 nmap <leader>cl :let @*=expand("%:p")<CR>
+
+" Change Tabs
+nnoremap <c-Left> :tabprevious<CR>
+nnoremap <c-Right> :tabnext<CR>
+inoremap <c-Left> <Esc>:tabprevious<CR>
+inoremap <c-Right> <Esc>:tabnext<CR>
+
+" Switch buffers
+nnoremap <Tab> <c-w>w
+nnoremap <s-Tab> <c-w>W
+
 """ Forgive """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Disable entering EX mode by accident
 map Q <Nop>
