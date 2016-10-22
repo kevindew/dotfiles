@@ -294,6 +294,9 @@ inoremap <c-Right> <Esc>:tabnext<CR>
 nnoremap <Tab> <c-w>w
 nnoremap <s-Tab> <c-w>W
 
+" Auto-complete command line
+set wildchar=<Tab> wildmenu wildmode=full
+
 """ Forgive """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Disable entering EX mode by accident
 map Q <Nop>
