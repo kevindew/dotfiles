@@ -22,6 +22,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-dispatch'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 call vundle#end()
 filetype plugin indent on
 
@@ -65,6 +67,7 @@ set clipboard=unnamed
 set switchbuf=usetab
 set foldmethod=syntax
 set foldlevelstart=20
+set laststatus=2
 let mapleader = " "
 
 " set vertical marker at col 80
