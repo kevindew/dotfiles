@@ -142,8 +142,11 @@ map <leader>n :call RenameFile()<cr>
 " RSpec let double - Convert bare word to let(:thing) { double(:thing) }
 map <leader>rld Ilet(:wviwyA) { double(:pA) }
 
-" Ruby binding pry - insert binding.pry on the line above
+" Ruby binding pry - insert binding.pry on the line below
 map <leader>bp orequire "pry"; binding.pry # DEBUG @kevindew<esc>
+
+" Ruby byebug - insert byebug on the line below
+map <leader>bb obyebug # DEBUG @kevindew<esc>
 
 " Ruby tap and pry
 map <leader>rtp o.tap { \|o\| "DEBUG @kevindew"; require "pry"; binding.pry }<esc>
