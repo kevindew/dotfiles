@@ -13,6 +13,7 @@ alias sidekiq-integration-port-fw="ssh backend-1.backend.integration -CNL 9000:1
 alias rabbitmq-integration-port-fw="ssh rabbitmq-1.backend.integration -L 15673:127.0.0.1:15672"
 alias gfu="git push --force"
 alias gff="git pull --ff-only"
+alias make-cinema-display-camera-work=sudo killall VDCAssistant
 function vm_copy {
   vagrant scp $1 ${VAGRANT_GOVUK_ID}:~/$2
 }
