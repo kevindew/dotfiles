@@ -12,6 +12,7 @@ alias vpn-ah="sudo openconnect -v --pfs --no-dtls -u kevindew vpn.digital.cabine
 alias sidekiq-integration-port-fw="ssh backend-1.backend.integration -CNL 9000:127.0.0.1:80"
 alias rabbitmq-integration-port-fw="ssh rabbitmq-1.backend.integration -L 15673:127.0.0.1:15672"
 alias gfu="git push --force"
+alias gff="git pull --ff-only"
 function vm_copy {
   vagrant scp $1 ${VAGRANT_GOVUK_ID}:~/$2
 }
