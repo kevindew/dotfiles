@@ -19,7 +19,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Yggdroot/indentLine'
 Plugin 'djoshea/vim-autoread'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-dispatch'
 Plugin 'vim-airline/vim-airline'
@@ -83,24 +83,25 @@ set mouse=ar mousemodel=extend
 
 " NERDTree
 map <C-n> :NERDTreeTabsToggle<CR>
+let NERDTreeShowHidden=1
 
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_ruby_checkers = ['rubocop', 'mri']
-if executable('/usr/bin/govuk-lint-ruby-shim.sh')
-  let g:syntastic_ruby_rubocop_exec = '/usr/bin/govuk-lint-ruby-shim.sh'
-endif
-if executable('/Users/kevindew/bin/govuk-lint-ruby-shim.sh')
-  let g:syntastic_ruby_rubocop_exec = '/Users/kevindew/bin/govuk-lint-ruby-shim.sh'
-endif
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+"
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+"
+" let g:syntastic_ruby_checkers = ['rubocop', 'mri']
+" if executable('/usr/bin/govuk-lint-ruby-shim.sh')
+"   let g:syntastic_ruby_rubocop_exec = '/usr/bin/govuk-lint-ruby-shim.sh'
+" endif
+" if executable('/Users/kevindew/bin/govuk-lint-ruby-shim.sh')
+"   let g:syntastic_ruby_rubocop_exec = '/Users/kevindew/bin/govuk-lint-ruby-shim.sh'
+" endif
 
 if executable('ag')
   " Use ag over grep
@@ -146,7 +147,7 @@ map <leader>rld Ilet(:wviwyA) { double(:pA) }
 map <leader>bp orequire "pry"; binding.pry # DEBUG @kevindew<esc>
 
 " Ruby byebug - insert byebug on the line below
-map <leader>bb obyebug # DEBUG @kevindew<esc>
+map <leader>bb orequire "byebug"; byebug # DEBUG @kevindew<esc>
 
 " Ruby tap and pry
 map <leader>rtp o.tap { \|o\| "DEBUG @kevindew"; require "pry"; binding.pry }<esc>
@@ -370,3 +371,11 @@ if &term =~ '256color'
 endif
 
 autocmd BufWritePre * :%s/\s\+$//e
+
+""" Quote / Unquote words """"""""""""""""""""""""""""""""""""""""""""""""""""
+" 'quote' a word
+nnoremap qw :silent! normal mpea'<Esc>bi'<Esc>`pl
+" double "quote" a word
+nnoremap qd :silent! normal mpea"<Esc>bi"<Esc>`pl
+" remove quotes from a word
+nnoremap wq :silent! normal mpeld bhd `ph<CR>
