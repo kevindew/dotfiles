@@ -114,6 +114,16 @@ eval "$(thefuck --alias)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-if [ -f ~/.localrc ]; then 
+if [ -f ~/.localrc ]; then
   . ~/.localrc
 fi
+
+if [ -f ~/.github-token ]; then
+  export GITHUB_TOKEN=`cat ~/.github-token`
+fi
+
+# Disables a no match error that zsh does which gets annoying if you use rake
+# like I do.
+unsetopt nomatch
+
+eval "$(pyenv init -)"
