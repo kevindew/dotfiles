@@ -14,17 +14,13 @@ Host govuk-vm
 Host *
   User kevindew
 
-# CI
-# --
-Host ci-master.ci-govuk
-  HostName ci-new.alphagov.co.uk
-  ProxyCommand none
+## CI
+## -------
+Host ci-jumpbox
+  Hostname ci-jumpbox.integration.publishing.service.gov.uk
 
-Host *.ci-govuk
-  ProxyCommand ssh -e none %r@ci-master.ci-govuk -W $(echo %h | sed 's/\.ci-govuk$//'):%p
-
-Host ci.dev.publishing.service.gov.uk
-  ProxyCommand none
+Host *.ci
+  ProxyCommand ssh -e none %r@ci-jumpbox -W $(echo %h | sed 's/\.ci$//'):%p
 
 # Integration
 # -------
