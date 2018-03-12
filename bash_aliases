@@ -9,7 +9,8 @@ if [ -d "$HOME/govuk/govuk-puppet/development-vm" ]; then
 fi
 alias vpn-ah="sudo openconnect -v --pfs --no-dtls -u kevindew vpn.digital.cabinet-office.gov.uk/ah"
 alias vpn-dr="sudo openconnect -v --pfs --no-dtls -u kevindew vpndr.digital.cabinet-office.gov.uk/ah"
-alias sidekiq-integration-port-fw="ssh backend-1.backend.integration -CNL 9000:127.0.0.1:80"
+alias sidekiq-staging-port-fw="ssh backend-1.backend.staging -CNL 9000:127.0.0.1:3211"
+alias sidekiq-production-port-fw="ssh backend-2.backend.production -CNL 9000:127.0.0.1:3211"
 alias rabbitmq-integration-port-fw="ssh rabbitmq-1.backend.integration -L 15673:127.0.0.1:15672"
 alias gfu="git push --force"
 alias gff="git pull --ff-only"
