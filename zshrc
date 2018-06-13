@@ -96,8 +96,6 @@ bindkey -e
 # The following lines were added by compinstall
 zstyle :compinstall filename "/Users/${USER}/.zshrc"
 
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
-
 autoload -Uz compinit
 compinit
 
@@ -126,4 +124,6 @@ fi
 # like I do.
 unsetopt nomatch
 
-eval "$(pyenv init -)"
+eval "$(rbenv init -)"
+
+export PATH="/usr/local/sbin:$PATH"
