@@ -20,3 +20,8 @@ alias make-cinema-display-camera-work="sudo killall VDCAssistant"
 function vm_copy {
   vagrant scp $1 ${VAGRANT_GOVUK_ID}:~/$2
 }
+alias ssh-integration="ssh \$(ssh integration \"govuk_node_list --single-node -c ${1}\").integration"
+
+function ssh_integration {
+  ssh $(ssh integration "govuk_node_list --single-node -c $1").integration
+}
