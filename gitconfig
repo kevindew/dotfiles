@@ -1,0 +1,14 @@
+[user]
+  name = "Kevin Dew"
+  email = kevindew@me.com
+  signingkey = 0284252C078C3F92
+[core]
+  excludesfile = ~/.gitignore_global
+[commit]
+  gpgsign = true
+[init]
+  templatedir = ~/.git_template
+[alias]
+  ctags = !.git/hooks/ctags
+[rebase]
+  autosquash = true

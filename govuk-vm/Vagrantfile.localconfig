@@ -1,0 +1,11 @@
+config.vm.provision :shell, path: "~/dotfiles/govuk-vm/provision.sh", privileged: false
+config.vm.provision :shell, inline: "chsh -s /bin/zsh vagrant"
+config.vm.provision :file, source: "~/dotfiles/govuk-vm/zshrc", destination: "~/.zshrc"
+config.vm.provision :file, source: "~/dotfiles/gitconfig", destination: "~/.gitconfig"
+config.vm.provision :file, source: "~/dotfiles/bash_aliases", destination: "~/.bash_aliases"
+config.vm.provision :file, source: "~/dotfiles/gitignore_global", destination: "~/.gitignore_global"
+config.vm.provision :file, source: "~/dotfiles/git_template", destination: "~/.git_template"
+config.vm.provision :file, source: "~/dotfiles/pryrc", destination: "~/.pryrc"
+config.vm.provision :file, source: "~/dotfiles/psqlrc", destination: "~/.psqlrc"
+config.vm.provision :file, source: "~/dotfiles/vimrc", destination: "~/.vimrc"
+
