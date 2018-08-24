@@ -12,3 +12,5 @@
   ctags = !.git/hooks/ctags
 [rebase]
   autosquash = true
+[credential]
+  helper = cache --timeout=1800
