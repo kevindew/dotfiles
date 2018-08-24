@@ -153,7 +153,7 @@ map <leader>bp orequire "pry"; binding.pry # DEBUG @kevindew<esc>
 map <leader>bb orequire "byebug"; byebug # DEBUG @kevindew<esc>
 
 " Ruby frozen string literal - insert byebug on the line below
-map <leader>fsl gg O# frozen_string_literal: true<esc>o<esc>
+map <leader>fsl ggO# frozen_string_literal: true<esc>
 
 " Ruby tap and pry
 map <leader>rtp o.tap { \|o\| "DEBUG @kevindew"; require "pry"; binding.pry }<esc>
