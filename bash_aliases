@@ -25,3 +25,11 @@ alias ssh-integration="ssh \$(ssh integration \"govuk_node_list --single-node -c
 function ssh_integration {
   ssh $(ssh integration "govuk_node_list --single-node -c $1").integration
 }
+
+function ssh_aws_staging {
+  ssh $(ssh aws-staging "govuk_node_list --single-node -c $1").aws-staging
+}
+
+function ssh_aws_production {
+  ssh $(ssh aws-production "govuk_node_list --single-node -c $1").aws-production
+}
