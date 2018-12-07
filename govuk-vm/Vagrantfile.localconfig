@@ -8,4 +8,5 @@ config.vm.provision :file, source: "~/dotfiles/git_template", destination: "~/.g
 config.vm.provision :file, source: "~/dotfiles/pryrc", destination: "~/.pryrc"
 config.vm.provision :file, source: "~/dotfiles/psqlrc", destination: "~/.psqlrc"
 config.vm.provision :file, source: "~/dotfiles/vimrc", destination: "~/.vimrc"
+config.vm.provision :file, source: "~/dotfiles/ssh-config", destination: "~/.ssh/config"
 
