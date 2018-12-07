@@ -128,7 +128,7 @@ unsetopt nomatch
 
 eval "$(rbenv init -)"
 
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/sbin:/Users/${USER}/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
