@@ -13,6 +13,7 @@ Host govuk-vm
 
 Host *
   User kevindew
+  IgnoreUnknown AddKeysToAgent,UseKeychain
   AddKeysToAgent yes
   UseKeychain yes
 
