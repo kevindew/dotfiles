@@ -376,7 +376,14 @@ if &term =~ '256color'
   set t_ut=
 endif
 
-autocmd BufWritePre * :%s/\s\+$//e
+fun! StripTrailingWhiteSpace()
+  " don't strip on these filetypes
+  if &ft =~ 'markdown'
+    return
+  endif
+  %s/\s\+$//e
+endfun
+autocmd bufwritepre * :call StripTrailingWhiteSpace()
 
 """ Quote / Unquote words """"""""""""""""""""""""""""""""""""""""""""""""""""
 " 'quote' a word
