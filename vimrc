@@ -70,6 +70,7 @@ set switchbuf=usetab
 set foldmethod=syntax
 set foldlevelstart=20
 set laststatus=2
+set termguicolors
 set re=1
 let mapleader = " "
 
