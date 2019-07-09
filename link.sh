@@ -8,6 +8,7 @@ ln -s "${SCRIPTDIR}/pryrc" ~/.pryrc
 ln -s "${SCRIPTDIR}/gitignore_global" ~/.gitignore_global
 ln -s "${SCRIPTDIR}/ssh-config" ~/.ssh/config
 ln -s "${SCRIPTDIR}/gitconfig" ~/.gitconfig
+ln -s "${SCRIPTDIR}/Brewfile" ~/Brewfile
 
 if [ -d ~/.git_template ]; then
   echo "~/.git_template already exists"
