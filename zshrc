@@ -87,17 +87,6 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename "/Users/${USER}/.zshrc"
-
-autoload -Uz compinit
-compinit
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
