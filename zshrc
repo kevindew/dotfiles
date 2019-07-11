@@ -115,9 +115,10 @@ fi
 # like I do.
 unsetopt nomatch
 
+export PATH="/usr/local/sbin:/$HOME/govuk/govuk-docker/bin:$HOME/bin:$PATH"
+
 eval "$(rbenv init -)"
 
-export PATH="/usr/local/sbin:/Users/${USER}/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
