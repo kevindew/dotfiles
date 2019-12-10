@@ -115,7 +115,7 @@ fi
 # like I do.
 unsetopt nomatch
 
-export PATH="/usr/local/sbin:/$HOME/govuk/govuk-docker/bin:$HOME/bin:$PATH"
+export PATH="/usr/local/sbin:/$HOME/govuk/govuk-docker/exe:$HOME/bin:$PATH"
 
 eval "$(rbenv init -)"
 
