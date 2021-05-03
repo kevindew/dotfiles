@@ -393,3 +393,8 @@ nnoremap qw :silent! normal mpea'<Esc>bi'<Esc>`pl
 nnoremap qd :silent! normal mpea"<Esc>bi"<Esc>`pl
 " remove quotes from a word
 nnoremap wq :silent! normal mpeld bhd `ph<CR>
+
+""" terraform """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
