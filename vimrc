@@ -295,10 +295,10 @@ nmap <leader>cs :let @*=expand("%")<CR>
 nmap <leader>cl :let @*=expand("%:p")<CR>
 
 " Change Tabs
-nnoremap <c-Left> :tabprevious<CR>
-nnoremap <c-Right> :tabnext<CR>
-inoremap <c-Left> <Esc>:tabprevious<CR>
-inoremap <c-Right> <Esc>:tabnext<CR>
+nnoremap <c-j> :tabprevious<CR>
+nnoremap <c-k> :tabnext<CR>
+inoremap <c-j> <Esc>:tabprevious<CR>
+inoremap <c-k> <Esc>:tabnext<CR>
 
 " Switch buffers
 nnoremap <Tab> <c-w>w
