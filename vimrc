@@ -70,8 +70,8 @@ set termguicolors
 set re=1
 let mapleader = " "
 
-" set vertical marker at col 80
-set colorcolumn=80
+" Soft coloumn at 80, more aggressive one at 120
+let &colorcolumn="80,".join(range(120,999),",")
 
 set listchars=tab:▸\ ,eol:¬
 set list
