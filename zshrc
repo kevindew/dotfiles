@@ -51,6 +51,10 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git bundler rails extract web-search macos)
 
+# User configuration
+
+export PATH="/opt/homebrew/bin:~/bin:$PATH"
+
 # Brew auto completion
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
@@ -58,11 +62,6 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
-
-# User configuration
-
-export PATH="~/bin:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,8 +105,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 alias vim="stty stop '' -ixoff ; vim"
 # # `Frozing' tty, so after any command terminal settings will be restored
 ttyctl -f
-
-eval "$(thefuck --alias)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
