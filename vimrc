@@ -149,6 +149,9 @@ map <leader>bp orequire "pry"; binding.pry # DEBUG @kevindew<esc>
 " Ruby byebug - insert byebug on the line below
 map <leader>bb orequire "byebug"; byebug # DEBUG @kevindew<esc>
 
+" Ruby debugger - insert debugger on the line below
+map <leader>db odebugger # DEBUG @kevindew<esc>
+
 " Ruby frozen string literal - insert byebug on the line below
 map <leader>fsl ggO# frozen_string_literal: true<esc>
 
