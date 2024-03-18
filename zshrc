@@ -112,6 +112,7 @@ if [ -f ~/.localrc ]; then
   . ~/.localrc
 fi
 
+export GITHUB_USERNAME=kevindew
 if [ -f ~/.github-token ]; then
   export GITHUB_TOKEN=`cat ~/.github-token`
 fi
@@ -129,4 +130,11 @@ if [ -d ~/.nvm ]; then
   . "$NVM_DIR/nvm.sh"
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
