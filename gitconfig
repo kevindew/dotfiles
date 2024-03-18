@@ -3,7 +3,7 @@
 	email = kevindew@me.com
   signingkey = 0284252C078C3F92
 [core]
-  excludesfile = ~/.gitignore_global
+	excludesFile = ~/.gitignore_global
 [commit]
   gpgsign = true
 [init]
