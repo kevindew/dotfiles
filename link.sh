@@ -1,4 +1,7 @@
-SCRIPTDIR=$(cd `dirname $0`; pwd)
+SCRIPTDIR=$(
+  cd $(dirname $0)
+  pwd
+)
 
 ln -s "${SCRIPTDIR}/zshrc" ~/.zshrc
 ln -s ~/.zshrc ~/.zprofile
@@ -10,9 +13,4 @@ ln -s "${SCRIPTDIR}/ssh-config" ~/.ssh/config
 ln -s "${SCRIPTDIR}/gitconfig" ~/.gitconfig
 ln -s "${SCRIPTDIR}/Brewfile" ~/Brewfile
 
-if [ -d ~/.git_template ]; then
-  echo "~/.git_template already exists"
-else
-  ln -s "${SCRIPTDIR}/git_template" ~/.git_template
-fi
 ln -s "${SCRIPTDIR}/psqlrc" ~/.psqlrc
