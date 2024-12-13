@@ -138,3 +138,7 @@ eval "$(pyenv init -)"
 export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
+# Needed for GPP signed git commits
+export GPG_TTY=$(tty)
