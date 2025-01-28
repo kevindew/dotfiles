@@ -13,4 +13,8 @@ ln -s "${SCRIPTDIR}/ssh-config" ~/.ssh/config
 ln -s "${SCRIPTDIR}/gitconfig" ~/.gitconfig
 ln -s "${SCRIPTDIR}/Brewfile" ~/Brewfile
 
+if [ ! -d ~/.config ]; then
+  mkdir "~/.config"
+fi
+ln -s "${SCRIPTDIR}/nvim" ~/.config/nvim
 ln -s "${SCRIPTDIR}/psqlrc" ~/.psqlrc
