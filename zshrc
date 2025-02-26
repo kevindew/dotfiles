@@ -53,7 +53,7 @@ plugins=(git bundler rails extract web-search macos)
 
 # User configuration
 
-export PATH="/opt/homebrew/bin:~/bin:$PATH"
+export PATH="~/.local/bin:/opt/homebrew/bin:~/bin:$PATH"
 
 # Brew auto completion
 if type brew &>/dev/null; then
@@ -142,3 +142,6 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 # Needed for GPP signed git commits
 export GPG_TTY=$(tty)
+
+# load env files from .envrc
+eval "$(direnv hook zsh)"
