@@ -3,6 +3,7 @@ alias gff="git pull --ff-only"
 alias gpf='git push --force-with-lease origin $(git_current_branch)'
 alias gcfix="git commit --fixup"
 alias k=kubectl
+alias gdr=govuk-docker-run
 
 # oh-my-zsh git alias conflict with gds-cli
 unalias gds
