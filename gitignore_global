@@ -1,3 +1,5 @@
 .DS_Store
 .tags
 .byebug_history
+
+**/.claude/settings.local.json
