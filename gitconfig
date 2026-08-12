@@ -1,9 +1,9 @@
 [user]
 	name = Kevin Dew
 	email = kevindew@me.com
-  signingkey = 0284252C078C3F92
+	signingkey = /Users/kevin.dew/.ssh/id_rsa.pub
 [commit]
-  gpgsign = true
+	gpgsign = true
 [init]
 	defaultBranch = main
 [rebase]
@@ -21,3 +21,7 @@
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = /Users/kevin.dew/.ssh/allowed_signers
