@@ -3,27 +3,3 @@ Host *
   IgnoreUnknown AddKeysToAgent,UseKeychain
   AddKeysToAgent yes
   UseKeychain yes
-
-# Integration
-# -------
-Host integration
-  Hostname jumpbox.integration.publishing.service.gov.uk
-
-Host *.integration
-  ProxyCommand ssh -e none %r@integration -W $(echo %h | sed 's/\.integration$//'):%p
-
-# Staging
-# -----------
-Host staging
-  Hostname jumpbox.blue.staging.govuk.digital
-
-Host *.staging
-  ProxyCommand ssh -e none %r@staging -W $(echo %h | sed 's/\.staging$//'):%p
-
-# Production
-# -----------
-Host production
-  Hostname jumpbox.blue.production.govuk.digital
-
-Host *.production
-  ProxyCommand ssh -e none %r@production -W $(echo %h | sed 's/\.production$//'):%p

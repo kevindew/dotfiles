@@ -1,7 +1,7 @@
 [user]
 	name = Kevin Dew
 	email = kevindew@me.com
-	signingkey = /Users/kevin.dew/.ssh/id_ed25519.pub
+	signingkey = /Users/KDew/.ssh/id_ed25519.pub
 [commit]
 	gpgsign = true
 [init]
@@ -24,4 +24,4 @@
 [gpg]
 	format = ssh
 [gpg "ssh"]
-	allowedSignersFile = /Users/kevin.dew/.ssh/allowed_signers
+	allowedSignersFile = /Users/KDew/.ssh/allowed_signers

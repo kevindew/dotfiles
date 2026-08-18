@@ -13,11 +13,11 @@ ln -s "${SCRIPTDIR}/gitconfig" ~/.gitconfig
 ln -s "${SCRIPTDIR}/Brewfile" ~/Brewfile
 
 if [ ! -d ~/.config ]; then
-  mkdir "~/.config"
+  mkdir ~/.config
 fi
 ln -s "${SCRIPTDIR}/nvim" ~/.config/nvim
 if [ ! -d ~/.config/git ]; then
-  mkdir "~/.config/git"
+  mkdir ~/.config/git
 fi
 ln -s "${SCRIPTDIR}/gitignore_global" ~/.config/git/ignore
 ln -s "${SCRIPTDIR}/psqlrc" ~/.psqlrc
