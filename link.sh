@@ -15,6 +15,11 @@ ln -s "${SCRIPTDIR}/Brewfile" ~/Brewfile
 if [ ! -d ~/.config ]; then
   mkdir ~/.config
 fi
+
+if [ ! -d ~/.nvm ]; then
+  mkdir ~/.nvm
+fi
+
 ln -s "${SCRIPTDIR}/nvim" ~/.config/nvim
 if [ ! -d ~/.config/git ]; then
   mkdir ~/.config/git
