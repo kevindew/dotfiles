@@ -4,6 +4,7 @@ alias gpf='git push --force-with-lease origin $(git_current_branch)'
 alias gcfix="git commit --fixup"
 alias k=kubectl
 alias gdr=govuk-docker-run
+alias claude-personal=CLAUDE_CONFIG_DIR='~/.claude-personal claude'
 
 # oh-my-zsh git alias conflict with gds-cli
 unalias gds
